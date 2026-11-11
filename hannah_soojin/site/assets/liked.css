@@ -1,0 +1,46 @@
+/* Regras da versão aprovada pelo Lucas (hero sem foto de fundo, antes/depois + kit) */
+.hero-art.hero-comparison{min-height:0;display:flex;flex-direction:column;align-items:center;gap:18px}
+.comparison-figure{margin:0;width:100%;max-width:520px;border-radius:20px;overflow:hidden;box-shadow:0 18px 40px -18px rgba(70,40,30,.35);background:#fff}
+.comparison-figure img{display:block;width:100%;height:auto}
+.comparison-figure figcaption{padding:10px 14px;font:700 12px/1.3 var(--f-b,Nunito,sans-serif);letter-spacing:.04em;text-align:center;color:var(--brown,#5a3a2e);background:#fff}
+.hero-comparison .hero-kit{height:260px;max-width:420px;margin:0 auto}
+.hero-comparison .hero-kit .cover3d:nth-child(1){left:6%;top:0;width:42%}
+.hero-comparison .hero-kit .cover3d:nth-child(2){left:40%;top:18px;width:30%}
+.hero-comparison .hero-kit .cover3d:nth-child(3){left:51%;top:40px;width:30%}
+.hero-comparison .hero-kit .cover3d:nth-child(4){left:62%;top:62px;width:30%}
+.regular-price{margin:0 0 4px;color:var(--muted,#7a6a62);font-size:14px;font-weight:700}
+.regular-price s{text-decoration-thickness:1.5px}
+.routine-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(24px,5vw,56px);align-items:center}
+.routine-grid img{width:100%;height:auto;border-radius:20px}
+@media(max-width:860px){.routine-grid{grid-template-columns:1fr}.hero-comparison .hero-kit{height:220px;max-width:340px}}
+
+/* Timer de oferta (10 min) */
+.otimer{display:inline-flex;align-items:center;gap:6px;padding:8px 14px;border-radius:999px;background:#FBE9E7;color:#B3261E;font:800 14px/1 var(--f-b,Nunito,sans-serif);white-space:nowrap}
+.otimer .ico{width:16px;height:16px}
+.otimer b{font-variant-numeric:tabular-nums;font-size:16px;letter-spacing:.02em}
+.cta-row{display:flex;flex-wrap:wrap;align-items:center;gap:14px}
+.nav-in{gap:12px}.nav-cta{margin-left:auto}.nav-in .otimer{padding:7px 12px}
+.final-timer{text-align:center;margin-top:14px}
+.dark .otimer{background:rgba(255,255,255,.14);color:#fff}
+.mbar .otimer{padding:0;background:none;font-size:12px;display:flex}
+@media(max-width:640px){.nav-in .otl,.nav-in .otimer .ico{display:none}.nav-in .otimer{padding:6px 10px}}
+
+/* Prova social: carrossel de conversas estilo Instagram */
+.proof .proof-note{text-align:center;font-size:12px;color:var(--muted,#7a6a62);margin-top:14px}
+.ig-wrap{margin:28px -16px 0;overflow:hidden}
+.ig-track{display:flex;gap:16px;overflow-x:auto;scroll-snap-type:x mandatory;padding:6px 16px 18px;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+.ig-track::-webkit-scrollbar{display:none}
+.ig-card{flex:0 0 min(300px,80%);scroll-snap-align:center;background:#fff;border-radius:22px;box-shadow:0 14px 34px -16px rgba(70,40,30,.35);overflow:hidden;display:flex;flex-direction:column;font-family:-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;border:1px solid #efefef}
+.ig-card header{display:flex;align-items:center;gap:10px;padding:12px 14px;border-bottom:1px solid #efefef}
+.ig-av{width:38px;height:38px;border-radius:50%;display:grid;place-items:center;color:#fff;font-weight:700;font-size:16px;flex:none}
+.ig-card header div{flex:1;line-height:1.2}.ig-card header b{display:block;font-size:14px;color:#262626}.ig-card header small{font-size:12px;color:#8e8e8e}
+.ig-dots{color:#262626;letter-spacing:2px;font-style:normal}
+.ig-body{display:flex;flex-direction:column;gap:6px;padding:16px 12px;min-height:210px}
+.ig-b{margin:0;max-width:82%;padding:9px 13px;border-radius:20px;font-size:14.5px;line-height:1.35}
+.ig-b.in{align-self:flex-start;background:#efefef;color:#262626}
+.ig-b.out{align-self:flex-end;background:linear-gradient(135deg,#7a5cf5,#c13ed1);color:#fff}
+.ig-seen{align-self:flex-end;font-size:11px;color:#8e8e8e;margin-top:2px}
+.ig-card footer{display:flex;align-items:center;justify-content:space-between;margin:0 12px 14px;padding:10px 14px;border:1px solid #dbdbdb;border-radius:999px;color:#8e8e8e;font-size:14px}
+.ig-card footer em{font-style:normal;font-size:18px;color:#262626}
+@media(min-width:900px){.ig-wrap{margin-inline:0}.ig-card{flex-basis:300px}}
+.ig-card footer{margin-top:auto}.ig-body{flex:1}

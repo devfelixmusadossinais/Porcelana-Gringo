@@ -1,0 +1,76 @@
+/* Thank-you pages: extends style.css */
+.ty-head{background:rgba(251,247,241,.9);border-bottom:1px solid var(--line)}
+.ty-head .wrap{display:flex;align-items:center;justify-content:space-between;height:68px}
+.ty-hero{position:relative;overflow:hidden;text-align:center;padding:clamp(44px,7vw,88px) 0 clamp(48px,7vw,84px);background:radial-gradient(700px 480px at 90% 0,#F8E1DF 0,transparent 60%),radial-gradient(600px 460px at 5% 100%,#E4EDE8 0,transparent 60%),var(--cream)}
+.ty-badge{width:76px;height:76px;border-radius:50%;margin:0 auto 22px;display:grid;place-items:center;background:var(--ac);color:#fff;font-size:38px;box-shadow:0 14px 30px -10px var(--ac-d);position:relative}
+.ty-badge::after{content:"";position:absolute;inset:-9px;border-radius:50%;border:2px solid var(--ac-l);animation:ring 2.8s var(--ease) infinite}
+@keyframes ring{0%{transform:scale(.88);opacity:.9}100%{transform:scale(1.32);opacity:0}}
+.ty-hero h1{font-size:clamp(2.2rem,5vw,3.6rem);margin-bottom:14px}
+.ty-hero .lead{margin-inline:auto;max-width:600px}
+.ty-cover{width:min(190px,48%);margin:6px auto 30px;position:relative;border-radius:8px;box-shadow:-14px 22px 40px -12px rgba(74,59,56,.5),0 0 0 1px rgba(74,59,56,.08);animation:float 7s ease-in-out infinite;transform:rotateY(-12deg) rotate(-2deg)}
+.ty-cover img{border-radius:8px;width:100%}
+.btn.big-btn{min-height:68px;padding:0 44px;font-size:clamp(17px,2.4vw,21px)}
+.ty-note{margin:16px 0 0;font-size:14.5px;color:var(--muted)}
+/* confetti */
+.confetti{position:absolute;inset:0;overflow:hidden;pointer-events:none;z-index:0}
+.confetti i{position:absolute;top:-24px;left:var(--x);width:var(--w);height:calc(var(--w)*1.7);background:var(--c);border-radius:2px;opacity:0;animation:fall var(--t) var(--dl) cubic-bezier(.3,.6,.4,1) 1 forwards}
+.confetti i:nth-child(3n){border-radius:50%;height:var(--w)}
+@keyframes fall{0%{opacity:0;transform:translateY(0) rotate(0)}10%{opacity:.85}85%{opacity:.75}100%{opacity:0;transform:translateY(560px) translateX(var(--dx)) rotate(var(--r))}}
+.ty-hero .wrap{position:relative;z-index:1}
+/* steps */
+.steps{list-style:none;margin:40px 0 0;padding:0;display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.step{background:#fff;border:1px solid var(--line);border-radius:24px;padding:30px 26px 26px;box-shadow:var(--sh);position:relative}
+.step b.n{position:absolute;top:-16px;left:24px;width:38px;height:38px;border-radius:50%;background:var(--ac);color:#fff;display:grid;place-items:center;font:700 18px var(--f-h)}
+.step h3{font-size:1.3rem;margin-bottom:8px}.step p{margin:0;color:var(--muted);font-size:16px}
+/* upgrade */
+.up{padding:clamp(56px,7vw,96px) 0}
+.up-head{text-align:center;max-width:760px;margin:0 auto 38px}
+.up-head .big{font-size:clamp(2rem,4.6vw,3.3rem)}
+.price-card{max-width:620px;margin:0 auto 46px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.2);border-radius:28px;padding:26px 28px;text-align:center}
+.price-card .pc-main{display:flex;justify-content:center;align-items:baseline;gap:10px;flex-wrap:wrap;font:600 1.2rem var(--f-h)}
+.price-card .pc-main strong{font-size:clamp(2.6rem,6vw,3.6rem);color:#fff;line-height:1}
+.price-card .pc-sum{margin:10px 0 0;font:700 16px var(--f-b);color:#E6C28F}
+.price-card .pc-honest{margin:12px 0 0;font-size:15px;color:rgba(246,238,227,.85)}
+.price-card .pc-honest b{color:#fff}
+.bonus3{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.up .bcard h3{font-size:1.4rem}
+.tag{font:800 12.5px var(--f-b);letter-spacing:.12em;text-transform:uppercase;color:var(--gold);margin:0 0 6px}
+.up-cmp{max-width:760px;margin:48px auto 0}
+.up-cmp .vtable{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.14)}
+.up-cta{text-align:center;margin-top:40px}
+.up-cta .btn{--bg:#fff;color:var(--plumd);border-color:#fff;box-shadow:0 16px 34px -12px rgba(0,0,0,.55)}
+.up-cta .btn:hover{background:#F6E9D9;border-color:#F6E9D9}
+.up-cta .small-print{margin:14px 0 0;font-size:14px;color:rgba(246,238,227,.75)}
+.decline{display:table;margin:22px auto 0;font:700 14.5px var(--f-b);color:rgba(246,238,227,.7);text-decoration:underline;text-underline-offset:4px}
+.decline:hover{color:#fff}
+/* library grid (premium) */
+.lib{display:grid;grid-template-columns:repeat(4,1fr);gap:22px;margin-top:40px}
+.lib .bcard{background:#fff;border:1px solid var(--line);box-shadow:var(--sh)}
+.lib .bcard:hover{background:#fff}
+.lib .bbody p:not(.tag){color:var(--muted);font-size:15px}.lib .bbody .tag{color:var(--gold)}.lib .bbody h3{color:var(--brown);font-size:1.25rem}
+.lib .cover3d{box-shadow:-12px 18px 30px -10px rgba(74,59,56,.45)}
+.lib .bcard.main{border-color:var(--ac);border-width:2px}
+/* add-ons */
+.addons{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin:36px auto 0;max-width:860px}
+.addon{display:flex;gap:20px;align-items:center;background:#fff;border:1px solid var(--line);border-radius:26px;padding:20px;box-shadow:var(--sh)}
+.addon .cover3d{width:96px;flex:none;margin:0;box-shadow:-8px 12px 20px -8px rgba(74,59,56,.45)}
+.addon h3{font-size:1.2rem;margin-bottom:6px}.addon p{margin:0;font-size:15px;color:var(--muted)}
+.addon-note{max-width:700px;margin:26px auto 0;text-align:center;color:var(--muted);font-size:15.5px}
+/* support */
+.support{background:#fff;border:1px solid var(--line);border-radius:28px;padding:30px;text-align:center;max-width:640px;margin:0 auto;box-shadow:var(--sh)}
+.support h2{font-size:1.7rem;margin-bottom:8px}.support p{color:var(--muted)}
+.support a.mail{font:700 19px var(--f-b);color:var(--ac-d);overflow-wrap:anywhere}
+.foot{padding-bottom:50px}
+.foot a.top{color:#fff;font-weight:700}
+@media (max-width:1020px){.lib{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:760px){
+ .steps,.bonus3,.addons,.lib{grid-template-columns:1fr}
+ .steps{gap:30px}
+ .bonus3{gap:18px}
+ .btn.big-btn{width:100%;padding:0 22px}
+ .price-card{padding:22px 18px}
+ .up-cmp .vtable td{width:70px}
+ .lib .bcard{padding:22px 18px}
+ .ty-head .btn{display:none}
+}
+@media (prefers-reduced-motion:reduce){.confetti{display:none}.ty-badge::after{display:none}.ty-cover{animation:none}}

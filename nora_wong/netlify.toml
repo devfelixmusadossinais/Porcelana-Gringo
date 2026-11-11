@@ -1,0 +1,3 @@
+# Netlify publica so a pasta site/ (pagina de vendas + paginas de obrigado)
+[build]
+  publish = "site"
