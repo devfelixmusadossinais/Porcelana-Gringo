@@ -1,0 +1,279 @@
+/* Sistema PANTRY - The Backyard Pantry. {{FONTS}} e substituido pelo build (../assets/fonts). */
+@font-face{font-family:'Lora';font-weight:600;font-style:normal;src:url({{FONTS}}/lora-latin-600-normal.woff2) format('woff2')}
+@font-face{font-family:'Lora';font-weight:700;font-style:normal;src:url({{FONTS}}/lora-latin-700-normal.woff2) format('woff2')}
+@font-face{font-family:'Lora';font-weight:400;font-style:italic;src:url({{FONTS}}/lora-latin-400-italic.woff2) format('woff2')}
+@font-face{font-family:'Poppins';font-weight:400;font-style:normal;src:url({{FONTS}}/poppins-latin-400-normal.woff2) format('woff2')}
+@font-face{font-family:'Poppins';font-weight:400;font-style:italic;src:url({{FONTS}}/poppins-latin-400-italic.woff2) format('woff2')}
+@font-face{font-family:'Poppins';font-weight:500;font-style:normal;src:url({{FONTS}}/poppins-latin-500-normal.woff2) format('woff2')}
+@font-face{font-family:'Poppins';font-weight:600;font-style:normal;src:url({{FONTS}}/poppins-latin-600-normal.woff2) format('woff2')}
+@font-face{font-family:'Poppins';font-weight:700;font-style:normal;src:url({{FONTS}}/poppins-latin-700-normal.woff2) format('woff2')}
+
+:root{--forest:#2F4B3C;--forest2:#3A5A48;--forest3:#2A4335;--orange:#C9772F;--cream:#FBF6EC;--sand:#EFE7D6;--sage:#6F8B6C;--leaf:#4D8B5E;--red:#A84A3A;--rose:#F8E9E4;--ink:#33403A;--muted:#6B7468;--line:#E5DCC8}
+@page{size:8.5in 11in;margin:0}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{font-family:'Poppins',sans-serif;font-weight:400;color:var(--ink);background:var(--cream);-webkit-print-color-adjust:exact;print-color-adjust:exact;font-size:10.5pt;line-height:1.55}
+@media screen{body{background:#d9d4c8}.page{margin:0 auto 14px}}
+.page{position:relative;width:8.5in;height:11in;overflow:hidden;background:var(--cream);break-after:page;page-break-after:always}
+.page:last-child{break-after:auto;page-break-after:auto}
+
+/* cabecalho / rodape */
+.hdr{position:absolute;left:56px;right:56px;top:40px;display:flex;justify-content:space-between;font-size:7.5pt;letter-spacing:.08em;text-transform:uppercase;padding-bottom:9px;border-bottom:1px solid #E2C9A8}
+.hdr .l{color:var(--forest);font-weight:500}.hdr .r{color:var(--orange);font-weight:500}
+.ftr{position:absolute;left:0;right:0;bottom:34px;text-align:center;font-size:8.5pt;color:var(--muted)}
+.pg-body{position:absolute;left:56px;right:56px;top:92px;bottom:64px;overflow:hidden}
+.blk{margin:0 0 14px}
+.measure{position:absolute;left:-12000px;top:0;width:704px;visibility:hidden}
+
+/* tipografia */
+.eyebrow{font-size:8pt;letter-spacing:.22em;text-transform:uppercase;font-weight:500;color:var(--orange);margin:0 0 6px}
+h1.t{font-family:'Lora',serif;font-weight:700;color:var(--forest);font-size:27pt;line-height:1.15;margin:0 0 10px}
+h1.t.rule:after{content:"";display:block;width:56px;height:3px;background:var(--orange);margin-top:12px;border-radius:2px}
+h2.sec{font-family:'Lora',serif;font-weight:700;color:var(--forest);font-size:18pt;line-height:1.2;margin:6px 0 8px;padding-bottom:7px;border-bottom:2px solid var(--orange)}
+p{margin:0 0 9px}
+.lead{font-family:'Lora',serif;font-style:italic;font-size:12.5pt;line-height:1.5;color:var(--forest)}
+.big p{font-size:12pt;line-height:1.7}
+em.it,.it{font-style:italic}
+a{color:var(--orange);text-decoration:none;border-bottom:1px solid rgba(201,119,47,.4)}
+.muted{color:var(--muted)}
+.small{font-size:8.5pt;line-height:1.5;color:var(--muted)}
+.note{font-size:8.5pt;line-height:1.55;font-style:italic;color:var(--muted);padding:2px 4px 0}
+
+/* selos */
+.seal{display:inline-block;font-size:6.8pt;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:#fff;border-radius:999px;padding:3px 12px;white-space:nowrap}
+.s-strong{background:var(--leaf)}.s-some{background:var(--orange)}.s-trad{background:var(--sage)}
+
+/* callouts */
+.callout{background:var(--sand);border-left:5px solid var(--orange);padding:14px 18px;border-radius:2px 8px 8px 2px}
+.callout p:last-child{margin-bottom:0}
+.callout .ct{font-family:'Lora',serif;font-weight:700;color:var(--forest);font-size:12.5pt;margin-bottom:5px}
+.callout .ey{font-size:7.5pt;letter-spacing:.18em;text-transform:uppercase;font-weight:600;color:var(--orange);margin-bottom:4px}
+.warn{background:var(--rose);border-left:5px solid var(--red);padding:14px 18px;border-radius:2px 8px 8px 2px}
+.warn p:last-child{margin-bottom:0}
+.warn .ct{font-family:'Lora',serif;font-weight:700;color:var(--red);font-size:12.5pt;margin-bottom:5px}
+.warn .ey{font-size:7.5pt;letter-spacing:.18em;text-transform:uppercase;font-weight:600;color:var(--red);margin-bottom:4px}
+
+/* sumario */
+.toc{display:block}
+.toc .row{display:flex;align-items:baseline;gap:18px;padding:12px 2px;border-bottom:1px solid var(--line)}
+.toc .k{width:96px;font-family:'Lora',serif;font-weight:700;color:var(--orange);font-size:15pt}
+.toc .k.sm{font-size:9.5pt;letter-spacing:.02em}
+.toc .nm{flex:1;color:var(--forest);font-weight:500;font-size:11pt}
+.toc .row.intro .nm{font-weight:400;color:#4b574f}
+.toc .pn{font-size:10pt;color:var(--muted);font-weight:500;min-width:20px;text-align:right}
+
+/* divisor de capitulo */
+.page.divider{background:var(--forest)}
+.page.divider .c1{position:absolute;width:560px;height:560px;border-radius:50%;background:var(--forest2);right:-180px;top:-250px}
+.page.divider .c2{position:absolute;width:420px;height:420px;border-radius:50%;background:var(--forest3);left:-210px;bottom:-190px}
+.page.divider .c3{position:absolute;width:150px;height:150px;border-radius:50%;border:2px solid rgba(201,119,47,.55);right:70px;bottom:210px}
+.page.divider .txt{position:absolute;left:78px;right:90px;top:50%;transform:translateY(-50%)}
+.page.divider .ch{color:var(--orange);font-size:9pt;letter-spacing:.34em;font-weight:500;text-transform:uppercase}
+.page.divider .ch:after{content:"";display:block;width:56px;height:3px;background:var(--orange);margin:12px 0 22px}
+.page.divider h1{font-family:'Lora',serif;font-weight:700;color:#fff;font-size:38pt;line-height:1.15;margin:0 0 20px}
+.page.divider .ds{font-style:italic;color:#E9E3D0;font-size:12.5pt;line-height:1.6;max-width:5.1in}
+.page.divider .num{position:absolute;left:78px;bottom:84px;font-family:'Lora',serif;font-weight:700;font-size:120pt;line-height:1;color:rgba(255,255,255,.06)}
+
+/* cartao de ingrediente */
+.card{border-radius:3px;overflow:hidden}
+.ing{box-shadow:0 1px 3px rgba(47,75,60,.18);background:#fff}
+.band{background:var(--forest);color:#fff;display:flex;justify-content:space-between;align-items:center;padding:11px 20px}
+.band .nm{font-family:'Lora',serif;font-weight:700;font-size:15pt;line-height:1.2}
+.band .nm .no{color:var(--orange);margin-right:12px}
+.ing .body{border:1px solid var(--line);border-top:0;padding:13px 20px 15px}
+.ing .sub{font-style:italic;color:var(--orange);font-size:10.5pt;margin-bottom:6px}
+.ing p{font-size:9.6pt;line-height:1.6}
+.how{font-size:7.4pt;letter-spacing:.14em;text-transform:uppercase;color:var(--orange);font-weight:600;margin:10px 0 3px}
+.ing .xtra{font-size:9pt;color:var(--muted);margin-top:2px}
+
+/* cartao de receita */
+.rec{box-shadow:0 1px 3px rgba(47,75,60,.18);background:#fff}
+.rec .band{padding:13px 20px}
+.rec .body{border:1px solid var(--line);border-top:0;padding:12px 20px 12px}
+.rec .for{font-style:italic;color:var(--muted);font-size:9.3pt;margin-bottom:9px}
+.rec .evn{font-size:8.2pt;color:var(--muted);line-height:1.5;margin:-3px 0 8px}
+.cols{display:flex;gap:26px}
+.cols>div{flex:1}
+.cols .lbl{font-size:7.4pt;letter-spacing:.14em;text-transform:uppercase;color:var(--orange);font-weight:600;margin-bottom:4px}
+.cols ul,.cols ol{margin:0;padding:0;list-style:none;font-size:9.4pt;line-height:1.5}
+.cols li{margin:0 0 2px}
+.cols ul li:before{content:"\2022";color:var(--orange);font-weight:700;margin-right:7px}
+.cols ol li{padding-left:18px;text-indent:-18px}
+.cols ol li b{color:var(--forest);font-weight:700;display:inline-block;width:18px;text-indent:0}
+.rec .tip{background:var(--sand);padding:9px 20px 10px;font-size:9pt;line-height:1.5;border:1px solid var(--line);border-top:0}
+.rec .tip b{color:var(--orange);font-weight:600}
+.rec .extra{font-size:8.4pt;color:var(--muted);line-height:1.5;padding:9px 20px 10px;background:#fff;border:1px solid var(--line);border-top:0}
+.rec .body+.extra,.rec .tip+.extra{border-top:1px dashed var(--line)}
+
+/* combinacoes */
+.combo{display:flex;gap:16px;background:#fff;border:1px solid var(--line);border-radius:6px;padding:11px 18px 3px;margin-bottom:10px;box-shadow:0 1px 3px rgba(47,75,60,.1)}
+.combo .n{flex:0 0 38px;height:38px;border-radius:50%;background:var(--orange);color:#fff;font-family:'Lora',serif;font-weight:700;font-size:16pt;display:flex;align-items:center;justify-content:center;margin-top:1px}
+.combo .tx{flex:1}
+.combo h3{margin:0 0 5px;font-family:'Lora',serif;font-weight:700;color:var(--forest);font-size:12.5pt;line-height:1.3}
+.combo p{font-size:9.4pt;line-height:1.5;margin-bottom:7px}
+
+/* tabelas (linhas em grid para poder dividir entre paginas) */
+.trow,.thead{display:grid;gap:0;padding:0}
+.thead{background:var(--sand);border-radius:6px 6px 0 0;margin-bottom:0}
+.thead>div{font-size:7.8pt;letter-spacing:.12em;text-transform:uppercase;font-weight:600;color:var(--forest);padding:9px 12px}
+.trow{border-bottom:1px solid var(--line);margin-bottom:0}
+.trow>div{padding:7px 12px;font-size:8.8pt;line-height:1.45}
+.trow>div:first-child{font-weight:600;color:var(--forest)}
+.tb{margin:0}
+.tb.last{margin-bottom:14px}
+.cols2{grid-template-columns:1.1fr 2.9fr}
+.cols3{grid-template-columns:1fr 1.2fr 2.2fr}
+.cols3b{grid-template-columns:.8fr 1.05fr 2.5fr}
+.cols4{grid-template-columns:.9fr 1.3fr 1.3fr 1.3fr}
+.cols3c{grid-template-columns:.9fr 1.5fr 1.2fr}
+.cols3d{grid-template-columns:1.1fr 1.6fr 2.3fr}
+
+/* faq */
+.faq{background:#fff;border:1px solid var(--line);border-radius:6px;padding:10px 20px 2px;margin-bottom:10px;border-top:3px solid var(--orange)}
+.faq h3{margin:0 0 4px;font-family:'Lora',serif;font-weight:700;color:var(--forest);font-size:12pt;line-height:1.3}
+.faq p{font-size:9.2pt;line-height:1.5;margin-bottom:7px}
+
+/* medidas / selos como usar */
+.seal-card{display:flex;gap:16px;align-items:flex-start;background:#fff;border:1px solid var(--line);border-radius:6px;padding:13px 18px}
+.seal-card .sl{flex:0 0 132px;padding-top:2px}
+.seal-card p{margin:0;font-size:9.4pt;line-height:1.55}
+.meas{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.meas .m{background:#fff;border:1px solid var(--line);border-radius:6px;padding:10px 14px;text-align:center}
+.meas .m b{display:block;font-family:'Lora',serif;color:var(--forest);font-size:13pt}
+.meas .m span{font-size:9pt;color:var(--muted)}
+.def{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.def .d{background:#fff;border:1px solid var(--line);border-radius:6px;padding:11px 14px}
+.def .d b{display:block;font-size:7.6pt;letter-spacing:.14em;text-transform:uppercase;color:var(--orange);font-weight:600;margin-bottom:3px}
+.def .d span{font-size:9pt;line-height:1.5}
+
+/* regras */
+.rules{counter-reset:r;list-style:none;margin:0;padding:0}
+.rules li{counter-increment:r;position:relative;padding:12px 18px 12px 62px;background:#fff;border:1px solid var(--line);border-radius:6px;margin-bottom:8px;font-size:9.8pt;line-height:1.55}
+.rules li:before{content:counter(r);position:absolute;left:16px;top:50%;transform:translateY(-50%);width:32px;height:32px;border-radius:50%;background:var(--orange);color:#fff;font-family:'Lora',serif;font-weight:700;display:flex;align-items:center;justify-content:center}
+
+/* lista de recursos */
+.res{background:#fff;border:1px solid var(--line);border-radius:6px;padding:11px 18px;font-size:9.4pt;line-height:1.55;border-left:4px solid var(--forest)}
+.res a{font-weight:600}
+
+/* contracapa */
+.page.back{background:var(--forest)}
+.page.back .c1{position:absolute;width:640px;height:640px;border-radius:50%;background:var(--forest2);left:50%;top:50%;transform:translate(-50%,-50%)}
+.page.back .c2{position:absolute;width:470px;height:470px;border-radius:50%;border:2px solid rgba(201,119,47,.6);left:50%;top:50%;transform:translate(-50%,-50%)}
+.page.back .c3{position:absolute;width:300px;height:300px;border-radius:50%;background:var(--forest3);right:-110px;top:-110px}
+.page.back .c4{position:absolute;width:340px;height:340px;border-radius:50%;background:var(--forest3);left:-150px;bottom:-150px}
+.page.back .mid{position:absolute;left:0;right:0;top:50%;transform:translateY(-50%);text-align:center;color:#fff}
+.page.back .mid .nm{font-family:'Lora',serif;font-weight:700;font-size:34pt;line-height:1.15}
+.page.back .mid .sb{color:#E9D3B0;letter-spacing:.3em;text-transform:uppercase;font-size:8.5pt;margin-top:14px;font-weight:500}
+.page.back .mid .rl{width:56px;height:3px;background:var(--orange);margin:20px auto 0}
+.page.back .bt{position:absolute;left:0;right:0;bottom:56px;text-align:center;color:#C9D4C7;font-size:8.5pt;letter-spacing:.06em}
+
+/* capa */
+.page.cover{background:var(--cream)}
+.page.cover svg{position:absolute;left:0;top:0;width:100%;height:100%}
+
+.warn.big{padding:22px 26px}.warn.big p{font-size:11pt;line-height:1.75;margin-bottom:13px}
+.seal-card.big{padding:20px 24px;margin-bottom:16px}.seal-card.big p{font-size:10.8pt;line-height:1.65}.seal-card.big .sl{flex-basis:150px}
+.lead.sm{font-size:11pt}
+.page .meas .m{padding:16px 14px}
+
+/* ==========================================================================
+   MOBILE READER MODE - screen only, narrow viewports (phones, in-app iframe).
+   The 816px pages become a fluid single column. Print/PDF and the 816px
+   build viewport never match (needs `screen` + max-width:720px).
+   ========================================================================== */
+@media screen and (max-width:720px){
+  html,body{overflow-x:hidden;-webkit-text-size-adjust:100%}
+  body{background:var(--cream);font-size:16px;line-height:1.6}
+  .page{width:auto;height:auto;min-height:0;overflow:visible;margin:0;display:flex;flex-direction:column}
+  .page+.page{border-top:1px solid var(--line)}
+  .hdr{display:none}
+  .pg-body{position:static;left:auto;right:auto;top:auto;bottom:auto;overflow:visible;padding:26px 18px 6px;flex:1 0 auto;min-width:0}
+  .ftr{position:static;bottom:auto;padding:6px 0 16px;font-size:12px}
+  .blk{margin-bottom:14px}
+
+  /* type */
+  .eyebrow{font-size:11.5px;letter-spacing:.16em}
+  h1.t{font-size:28px;line-height:1.15}
+  h2.sec{font-size:22px}
+  p{font-size:16px;margin-bottom:12px}
+  .lead{font-size:17px}
+  .big p{font-size:16.5px;line-height:1.7}
+  .small{font-size:13.5px}
+  .note{font-size:14px}
+  .seal{font-size:11px;padding:4px 12px}
+  .callout,.warn{padding:14px 16px}
+  .callout .ct,.warn .ct{font-size:17px}
+  .callout .ey,.warn .ey{font-size:11.5px}
+  .warn.big{padding:18px 18px}.warn.big p{font-size:16px;line-height:1.65}
+
+  /* contents */
+  .toc .row{gap:12px;padding:14px 2px}
+  .toc .k{width:64px;font-size:17px}
+  .toc .k.sm{font-size:12px;width:64px}
+  .toc .nm{font-size:15.5px}
+  .toc .pn{font-size:14px}
+
+  /* dividers, back cover: fluid height, content in flow */
+  .page.divider,.page.back{min-height:420px;justify-content:center;overflow:hidden}
+  .page.divider .txt{position:relative;left:auto;right:auto;top:auto;transform:none;padding:70px 24px;z-index:2}
+  .page.divider .ch{font-size:12px}
+  .page.divider h1{font-size:32px}
+  .page.divider .ds{font-size:16px;max-width:none}
+  .page.divider .num{left:20px;bottom:10px;font-size:90px}
+  .page.divider .c3{right:20px;bottom:30px;width:100px;height:100px}
+  .page.back .mid{position:relative;top:auto;transform:none;padding:90px 24px 20px;z-index:2}
+  .page.back .mid .nm{font-size:30px}
+  .page.back .mid .sb{font-size:12px}
+  .page.back .bt{position:relative;bottom:auto;padding:0 24px 50px;font-size:13px;z-index:2}
+  .page.back .c1{width:520px;height:520px}.page.back .c2{width:380px;height:380px}
+
+  /* cover is an illustration: keep its proportions, full width */
+  .page.cover{aspect-ratio:816/1056;overflow:hidden}
+  .page.cover svg{position:absolute}
+
+  /* ingredient + recipe cards */
+  .band{padding:12px 16px;gap:10px}
+  .band .nm{font-size:18px}
+  .band .nm .no{margin-right:8px}
+  .ing .body{padding:14px 16px 16px}
+  .ing .sub{font-size:15px}
+  .ing p{font-size:15.5px}
+  .how{font-size:11.5px}
+  .ing .xtra{font-size:14px}
+  .rec .band{padding:13px 16px}
+  .rec .body{padding:14px 16px}
+  .rec .for{font-size:15px}
+  .rec .evn{font-size:13.5px}
+  .cols{flex-direction:column;gap:14px}
+  .cols .lbl{font-size:11.5px}
+  .cols ul,.cols ol{font-size:15.5px;line-height:1.55}
+  .cols li{margin-bottom:5px}
+  .rec .tip{padding:12px 16px;font-size:15px}
+  .rec .extra{padding:12px 16px;font-size:14px}
+
+  /* combos, faq, rules, definitions */
+  .combo{gap:12px;padding:13px 14px 5px}
+  .combo .n{flex-basis:34px;height:34px;font-size:15px}
+  .combo h3{font-size:17px}
+  .combo p{font-size:15.5px}
+  .faq{padding:12px 16px 4px}
+  .faq h3{font-size:17px}
+  .faq p{font-size:15.5px}
+  .seal-card,.seal-card.big{flex-direction:column;gap:8px;padding:14px 16px}
+  .seal-card .sl,.seal-card.big .sl{flex:none}
+  .seal-card p,.seal-card.big p{font-size:15.5px}
+  .meas{grid-template-columns:1fr;gap:8px}
+  .meas .m b{font-size:17px}.meas .m span{font-size:15px}
+  .def{grid-template-columns:1fr}
+  .def .d b{font-size:11.5px}.def .d span{font-size:15px}
+  .rules li{padding:14px 14px 14px 58px;font-size:15.5px}
+  .res{font-size:15.5px;padding:12px 16px}
+
+  /* tables: each row becomes a labelled card, header row hidden */
+  .thead{display:none}
+  .trow{grid-template-columns:1fr!important;background:#fff;border:1px solid var(--line);border-radius:10px;margin-bottom:10px;padding:10px 4px}
+  .trow>div{padding:3px 12px;font-size:15px;line-height:1.5}
+  .trow>div:first-child{font-size:16.5px;padding-bottom:4px}
+  .trow>div:not(:first-child)::before{content:attr(data-label);display:block;font-size:11px;letter-spacing:.12em;text-transform:uppercase;font-weight:600;color:var(--orange);margin-top:4px}
+  .tb.last{margin-bottom:14px}
+}

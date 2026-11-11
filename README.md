@@ -1,12 +1,11 @@
-# Korean Silk Method — paginas (demo)
+# Korean Silk Method (demo)
 
-Site estatico unico, publicado pela raiz do repositorio (sem build):
+Dois sites estaticos no mesmo repositorio (sem build). No Netlify, um site por area:
 
-- `/Laurakim.of/`
-- `/nora_wong/`
-- `/hannah_soojin/`
+1. **Vendas** (publicar a raiz do repositorio): `/Laurakim.of/`, `/nora_wong/`, `/hannah_soojin/`
+2. **Entrega** (Base directory = `entrega`):
+   - `/thanks-basic/` e `/thanks-premium/`: paginas de obrigado (abertas, noindex)
+   - `/app/`: web app (aceita `?plano=basico` ou `?plano=premium`)
+   - `/app/ebooks/`: e-books em PDF e HTML
 
-Cada pasta tem `index.html` (vendas), `thanks-basic/` e `thanks-premium/`.
-
-Antes de ir ao ar de verdade: trocar prints/depoimentos, numeros de exemplo,
-links de checkout (`#CHECKOUT_*`, `#APP_URL`) e revisar precos e avisos legais.
+Placeholders ainda abertos: `#UPSELL_CHECKOUT` (obrigado Basic) e `#CHECKOUT_*` (vendas).
