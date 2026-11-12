@@ -184,7 +184,7 @@
 @media(max-width:860px){.devices .phone{width:32%}}
 
 /* imagens de produto (kit + notebook + celular) */
-img.prod{display:block;width:100%;height:auto;object-fit:contain;filter:drop-shadow(0 18px 24px rgba(70,40,30,.25))}
+img.prod{display:block;width:100%;height:auto;object-fit:contain;border-radius:18px;box-shadow:0 18px 40px -18px rgba(70,40,30,.35)}
 .hero-cover{width:100%;max-width:520px}
 .hero-cover .hero-prod{width:min(100%,520px);margin:0 auto}
 .plan-art{height:auto!important;padding:0 0 6px}
