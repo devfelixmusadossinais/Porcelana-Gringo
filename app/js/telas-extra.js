@@ -60,8 +60,6 @@ function desafioIntro() {
 function desafioVespera() {
   var V = DESAFIO.vespera, sd = sub('desafio', 'partida');
   var h = desafioIntro() + '<section class="secao"><h2>' + esc(DESAFIO.diaZero.titulo) + '</h2><p class="sub">' + esc(DESAFIO.diaZero.subtitulo) + '</p>' +
-    '<div class="card"><h3>' + esc(V.testeDeContato.titulo) + '</h3><p>' + esc(V.testeDeContato.instrucao) + '</p><ul class="marcaveis">' +
-    V.testeDeContato.ingredientes.map(function (i, k) { return marcavel('desafio', 'teste-' + k, i, '', marcado('desafio', 'teste-' + k)); }).join('') + '</ul></div>' +
     '<div class="card"><h3>' + esc(V.prepareHoje.titulo) + '</h3>' + V.prepareHoje.itens.map(function (it) {
       return '<p class="mt"><b>' + esc(it.nome) + '</b><br>' + esc(it.texto) + '</p><div class="rlinks">' + rlink(it.receita) + '</div>';
     }).join('') + '<p class="peq muted mt">' + esc(V.prepareHoje.nota) + '</p></div>' +

@@ -37,7 +37,7 @@ function listaOL(arr) { return '<ol class="lista">' + (arr || []).map(function (
 
 /* ---------- 1. primeiro acesso ---------- */
 function telaOnboarding() {
-  var bolas = '<div class="passos-onb" aria-hidden="true">' + [0, 1, 2].map(function (i) { return '<i class="' + (i <= UI.onb ? 'on' : '') + '"></i>'; }).join('') + '</div>';
+  var bolas = '<div class="passos-onb" aria-hidden="true">' + [0, 1].map(function (i) { return '<i class="' + (i <= UI.onb ? 'on' : '') + '"></i>'; }).join('') + '</div>';
   var h = '<div class="onb">' + bolas;
   if (UI.onb === 0) {
     var bv = GUIA.boasVindas;
@@ -51,13 +51,9 @@ function telaOnboarding() {
         return '<div class="regra"><span class="n">' + r.n + '</span><div><b>' + esc(r.titulo) + '</b>' + esc(r.texto) + '</div></div>';
       }).join('') + '</div>' +
       '<label class="aceite">' + ck('id="aceite" data-acao="aceite"', UI.aceite, 'I have read and understand the golden rules') + '<span>I have read and understand the 6 golden rules</span></label>' +
-      '<div class="btns"><button class="btn block" data-acao="onb" data-p="2"' + (UI.aceite ? '' : ' disabled') + '>Continue' + ico('seta') + '</button>' +
-      '<button class="btn ghost block" data-acao="onb" data-p="0">Back</button></div>';
-  } else {
-    h += telaDia0Corpo() +
-      '<div class="btns"><button class="btn block" data-acao="comecar">Start my day 1' + ico('seta') + '</button>' +
-      '<button class="btn ghost block" data-acao="depois">My 24-hour patch test is still in progress</button></div>' +
-      '<p class="peq muted mt">Day 1 begins on the date you tap "Start my day 1".</p>';
+      '<div class="btns"><button class="btn block" data-acao="comecar"' + (UI.aceite ? '' : ' disabled') + '>Start my day 1' + ico('seta') + '</button>' +
+      '<button class="btn ghost block" data-acao="onb" data-p="0">Back</button></div>' +
+      '<p class="peq muted mt">Day 1 begins today, the moment you tap "Start my day 1".</p>';
   }
   return h + '</div>' + rodape();
 }
@@ -77,8 +73,8 @@ function telaHoje() {
   var h = topo();
   if (!atual) {
     h += '<section class="hero"><p class="kicker">Today</p><h1>Start your day 1</h1>' +
-      '<p class="mt">Do a 24-hour patch test and begin once everything looks and feels fine.</p>' +
-      '<div class="btns"><button class="btn claro block" data-acao="ir-dia0">View Day 0 and get started' + ico('seta') + '</button></div></section>' +
+      '<p class="mt">Your 21-day ritual begins the moment you tap start.</p>' +
+      '<div class="btns"><button class="btn claro block" data-acao="comecar">Start my day 1' + ico('seta') + '</button></div></section>' +
       lembreteSol() + previaRitual() + rodape();
     return h;
   }
@@ -185,7 +181,7 @@ function telaDias() {
   var atual = diaAtual(), total = CONFIG.plano21.totalDias;
   var feitos = diasConcluidos(), pct = Math.round(feitos / total * 100);
   var h = topo() + '<p class="kicker">Your journey</p><h1>21 days</h1>';
-  if (!atual) h += '<div class="card pastel"><p>Your day 1 hasn\'t started yet.</p><div class="btns"><button class="btn block" data-acao="ir-dia0">Start my day 1</button></div></div>';
+  if (!atual) h += '<div class="card pastel"><p>Your day 1 hasn\'t started yet.</p><div class="btns"><button class="btn block" data-acao="comecar">Start my day 1</button></div></div>';
   h += '<div class="resumo"><div><b>' + pct + '%</b><span>complete</span></div><div><b>' + feitos + '</b><span>of ' + total + ' days</span></div><div><b>' + sequencia() + '</b><span>days in a row</span></div></div>' +
     '<div class="barra clara" style="margin-top:12px" aria-hidden="true"><span style="transform:scaleX(' + feitos / total + ')"></span></div>' +
     '<div class="legenda"><span><i style="background:var(--cta);border-color:var(--cta)"></i>done</span><span><i style="background:var(--ouro-p);border-color:var(--ouro)"></i>today</span><span><i></i>pending</span></div>';
@@ -380,7 +376,7 @@ function telaGuia() {
     ['g-ingredientes', 'gota', 'Ingredient guide', 'What each ingredient does and precautions to take'],
     ['g-kit', 'tigela', 'Basic kit', 'Tools for preparing recipes at home'],
     ['g-faq', 'livro', 'Frequently asked questions', ''],
-    ['g-regras', 'escudo', 'The 6 golden rules', 'Patch testing, sunscreen, and more'],
+    ['g-regras', 'escudo', 'The 6 golden rules', 'Sunscreen, safety, and more'],
     ['g-aviso', 'alerta', 'Important notice', 'Read before use']
   ];
   function li(x, cls) {

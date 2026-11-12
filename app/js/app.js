@@ -25,7 +25,7 @@
       html = telaOnboarding(); mostrarNav = false;
     } else if (r === 'dia0') {
       if (S.inicio) { window.location.replace('#hoje'); return; }
-      UI.onb = 2; html = '<header class="topo"><button class="voltar" data-acao="voltar" data-para="hoje">' + ico('voltar') + 'Back</button></header>' + telaOnboarding(); navKey = 'hoje';
+      window.location.replace('#hoje'); return;
     } else if (r === 'hoje') { UI.diaVisto = null; html = telaHoje(); navKey = 'hoje'; }
     else if (/^dia-\d+$/.test(r)) { UI.diaVisto = +r.split('-')[1]; html = telaHoje(); navKey = 'hoje'; }
     else if (r === 'dias') { html = telaDias(); navKey = 'dias'; }
