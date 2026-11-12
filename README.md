@@ -1,11 +1,11 @@
 # Korean Silk Method (demo)
 
-Dois sites estaticos no mesmo repositorio (sem build). No Netlify, um site por area:
+Site estatico unico, publicado pela raiz do repositorio (sem build).
 
-1. **Vendas** (publicar a raiz do repositorio): `/Laurakim.of/`, `/nora_wong/`, `/hannah_soojin/`
-2. **Entrega** (Base directory = `entrega`):
-   - `/thanks-basic/` e `/thanks-premium/`: paginas de obrigado (abertas, noindex)
-   - `/app/`: web app (aceita `?plano=basico` ou `?plano=premium`)
-   - `/app/ebooks/`: e-books em PDF e HTML
+- Vendas: `/Laurakim.of/`, `/nora_wong/`, `/hannah_soojin/`
+- Obrigado: `/thanks-basic/`, `/thanks-premium/` (abertas, noindex)
+- App: `/app-basico/` e `/app-premium/` (o mesmo app, ja no plano certo)
+- App sem plano fixo: `/app/` (aceita `?plano=basico` ou `?plano=premium`)
+- E-books: `/app/ebooks/`
 
-Placeholders ainda abertos: `#UPSELL_CHECKOUT` (obrigado Basic) e `#CHECKOUT_*` (vendas).
+Pendente: `#UPSELL_CHECKOUT` (obrigado Basic) e `#CHECKOUT_*` (vendas).
