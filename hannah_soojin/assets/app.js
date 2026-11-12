@@ -109,3 +109,33 @@
     });
   }
 })();
+
+// v2: arrastar carrosseis (receitas e bonus) com o mouse. Toque ja rola nativamente.
+(() => {
+  document.querySelectorAll('.rcards, .bgrid').forEach(el => {
+    let down = false, moved = false, startX = 0, startLeft = 0;
+    el.addEventListener('pointerdown', e => {
+      if (e.pointerType !== 'mouse' || e.button !== 0) return;
+      down = true; moved = false; startX = e.clientX; startLeft = el.scrollLeft;
+    });
+    window.addEventListener('pointermove', e => {
+      if (!down) return;
+      const dx = e.clientX - startX;
+      if (!moved && Math.abs(dx) > 4) { moved = true; el.classList.add('is-dragging'); }
+      if (moved) el.scrollLeft = startLeft - dx;
+    });
+    const end = () => {
+      if (!down) return;
+      down = false;
+      if (moved) {
+        const snap = el.scrollLeft;
+        el.classList.remove('is-dragging');
+        el.scrollTo({ left: snap, behavior: 'smooth' });
+      }
+    };
+    window.addEventListener('pointerup', end);
+    window.addEventListener('pointercancel', end);
+    el.addEventListener('click', e => { if (moved) { e.preventDefault(); e.stopPropagation(); moved = false; } }, true);
+    el.addEventListener('dragstart', e => e.preventDefault());
+  });
+})();
